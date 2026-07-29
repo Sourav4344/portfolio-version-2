@@ -63,15 +63,12 @@ export const about = {
       copy: "Electrical engineering by degree, software by obsession. I treat every gap in my knowledge as the next thing to fix.",
     },
   ],
-<<<<<<< HEAD
-=======
   goals: [
     "Qualify GATE Electrical Engineering while completing the B.Tech program.",
     "Build deep, hands-on expertise in ethical hacking and cybersecurity.",
     "Transition into a software engineering role backed by real, shipped projects.",
     "Keep contributing to open-source and freelance web work along the way.",
   ],
->>>>>>> 2627d01 (Fix About.tsx build error - add missing goals field)
   education: {
     degree: "B.Tech — Electrical Engineering",
     school: "Ramkrishna Mahato Government Engineering College (RKMGEC), Purulia",
