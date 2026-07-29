@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  --font-display: "Unbounded", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  background: #050816;
+  color: #ffffff;
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid #00e5ff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- layout helpers ---------- */
+.section-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 6% 40px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 18px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: linear-gradient(90deg, #38bdf8, transparent);
+}
+
+/* ---------- surfaces ---------- */
+.glass-card {
+  background: linear-gradient(180deg, rgba(13, 18, 48, 0.65), rgba(10, 14, 36, 0.5));
+  border: 1px solid rgba(148, 163, 255, 0.14);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* backdrop-filter blur is extremely costly to composite on mobile GPUs —
+   especially on elements that are also animating position (testimonials
+   marquee). Drop it below the tablet breakpoint; the solid gradient
+   background still reads the same visually at a glance. */
+@media (max-width: 767px) {
+  .glass-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: linear-gradient(180deg, rgba(13, 18, 48, 0.92), rgba(10, 14, 36, 0.88));
+  }
+}
+
+.glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6 55%, #00e5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 20px;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(56,189,248,0.6), rgba(139,92,246,0.4), transparent 70%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.text-balance { text-wrap: balance; }
+
+/* ---------- cursor ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-none-desktop { cursor: none; }
+}
+
+/* ---------- grain texture ---------- */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- scrollbar ---------- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #050816; }
+::-webkit-scrollbar-thumb { background: #1c2450; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #38bdf8; }

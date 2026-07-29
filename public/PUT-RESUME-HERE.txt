@@ -1,0 +1,2 @@
+Drop your actual resume PDF in this /public folder and name it "resume.pdf"
+(the Resume button in Hero.tsx links to /resume.pdf). Then delete this file.

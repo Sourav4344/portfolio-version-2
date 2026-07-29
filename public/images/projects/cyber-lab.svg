@@ -1,0 +1,28 @@
+<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1230"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="glow3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+    <pattern id="grid3" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.14"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg3)"/>
+  <rect width="600" height="340" fill="url(#grid3)"/>
+  <circle cx="500" cy="60" r="130" fill="#8B5CF6" opacity="0.14"/>
+  <circle cx="90" cy="290" r="130" fill="#00E5FF" opacity="0.10"/>
+
+  <!-- shield with terminal caret -->
+  <g transform="translate(240,55)">
+    <path d="M60,0 L118,20 L118,95 Q118,150 60,180 Q2,150 2,95 L2,20 Z" fill="none" stroke="url(#glow3)" stroke-width="3.5"/>
+    <path d="M32,80 L52,100 L32,120" fill="none" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="60" y1="120" x2="90" y2="120" stroke="#00E5FF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <text x="300" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#8B5CF6" opacity="0.85">CYBERSECURITY · LAB</text>
+</svg>

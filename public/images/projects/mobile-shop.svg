@@ -1,0 +1,35 @@
+<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1230"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="glow2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+    <pattern id="grid2" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#38BDF8" stroke-width="0.5" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg2)"/>
+  <rect width="600" height="340" fill="url(#grid2)"/>
+  <circle cx="120" cy="60" r="130" fill="#38BDF8" opacity="0.10"/>
+  <circle cx="500" cy="290" r="130" fill="#8B5CF6" opacity="0.12"/>
+
+  <!-- phone with price tag -->
+  <g transform="translate(255,70)">
+    <rect x="0" y="0" width="90" height="180" rx="14" fill="none" stroke="url(#glow2)" stroke-width="3"/>
+    <rect x="10" y="16" width="70" height="130" rx="4" fill="#38BDF8" opacity="0.08"/>
+    <line x1="34" y1="8" x2="56" y2="8" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="45" cy="162" r="6" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+  </g>
+
+  <g transform="translate(370,45)">
+    <path d="M0,20 L35,0 L70,20 L70,55 Q70,68 55,68 L15,68 Q0,68 0,55 Z" fill="none" stroke="#8B5CF6" stroke-width="2.5"/>
+    <circle cx="35" cy="26" r="6" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="35" y="50" text-anchor="middle" font-family="Arial" font-size="13" fill="#8B5CF6">₹</text>
+  </g>
+
+  <text x="300" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#38BDF8" opacity="0.8">MOBILE SHOP · MANAGEMENT</text>
+</svg>
