@@ -18,6 +18,7 @@ import SignalField from "@/components/SignalField";
 import Cursor from "@/components/Cursor";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const title = "Sourav Maji — Electrical Engineering Student & Developer";
 const description =
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Nav />
           <main className="relative z-10 min-h-screen">{children}</main>
           <Footer />
+        <Analytics />
       </body>
     </html>
   );
