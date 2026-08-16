@@ -78,7 +78,7 @@ export const about = {
       { label: "Sem 1", value: "7.23" },
       { label: "Sem 2", value: "7.41" },
       { label: "Sem 3", value: "7.41" },
-      { label: "Sem 4", value: "Awaited", pending: true },
+      { label: "Sem 4", value: "6.68" },
       { label: "Sem 5", value: "In progress", latest: true },
     ],
     prior: [
@@ -290,6 +290,26 @@ export const projects: Project[] = [
     live: null,
     github: null,
     featured: false,
+  },
+  {
+    id: "005",
+    image: "/images/projects/couple-site.png",
+    title: "Private Couple Website",
+    description:
+      "A password-protected personal website built as a private space for me and my girlfriend — featuring a custom login gate, timeline, and personal notes, with a dark romantic UI.",
+    features: [
+      "Custom username/password login gate with animated seal UI",
+      "Private timeline and mood board for shared memories",
+      "Real-time messaging between two accounts",
+    ],
+    challenges:
+      "Building secure authentication for a small private user base while keeping the UI polished and emotionally personal rather than generic.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
+    categories: ["Web", "Personal"],
+    timeline: "2025 — ongoing",
+    live: null,
+    github: null,
+    featured: true,
   },
 ];
 
