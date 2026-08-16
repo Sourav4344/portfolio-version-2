@@ -43,6 +43,12 @@ export const stats = [
   { value: 2028, suffix: "", label: "Graduation Year" },
 ];
 
+type Semester = {
+  label: string;
+  value: string;
+  pending?: boolean;
+  latest?: boolean;
+};
 export const about = {
   who: "An Electrical Engineering student with a deep passion for software systems, cybersecurity, and real-world problem solving. I build things that actually work for actual people — then I try to figure out how they'd break.",
   objective: [
@@ -80,7 +86,7 @@ export const about = {
       { label: "Sem 3", value: "7.41" },
       { label: "Sem 4", value: "6.68" },
       { label: "Sem 5", value: "In progress", latest: true },
-    ],
+    ] as Semester[],
     prior: [
       { label: "Higher Secondary", value: "80.8% · 2023" },
       { label: "Madhyamik", value: "92.1% · 2021" },
@@ -226,7 +232,7 @@ export const projects: Project[] = [
       "Balancing motion-heavy design with fast load times on a static host.",
     stack: ["HTML", "CSS", "JavaScript", "Netlify"],
     categories: ["Web", "College"],
-    timeline: "2024",
+    timeline: "2024-Ongoing",
     live: "https://sourav4344.netlify.app/",
     github: null,
     featured: true,
@@ -246,7 +252,7 @@ export const projects: Project[] = [
       "Designing an interface simple enough for family members with no tech background, without losing functionality.",
     stack: ["HTML", "CSS", "JavaScript", "LocalStorage"],
     categories: ["Web"],
-    timeline: "2024",
+    timeline: "2025",
     live: null,
     github: null,
     featured: true,
@@ -266,7 +272,7 @@ export const projects: Project[] = [
       "Keeping product/price data easy for a shop owner to update without a database or backend.",
     stack: ["HTML", "CSS", "JavaScript", "Google Sheets API"],
     categories: ["Web"],
-    timeline: "2024",
+    timeline: "2026",
     live: null,
     github: null,
     featured: true,
