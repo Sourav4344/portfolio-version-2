@@ -1,0 +1,32 @@
+<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1230"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <pattern id="grid1" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#38BDF8" stroke-width="0.5" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg1)"/>
+  <rect width="600" height="340" fill="url(#grid1)"/>
+  <circle cx="480" cy="70" r="120" fill="#8B5CF6" opacity="0.12"/>
+  <circle cx="90" cy="280" r="140" fill="#38BDF8" opacity="0.10"/>
+
+  <!-- house / family icon -->
+  <g transform="translate(230,90)">
+    <rect x="0" y="60" width="140" height="90" rx="8" fill="none" stroke="url(#glow1)" stroke-width="3"/>
+    <path d="M-15,60 L70,-10 L155,60" fill="none" stroke="url(#glow1)" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="55" y="95" width="30" height="55" rx="3" fill="#38BDF8" opacity="0.25" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="20" cy="90" r="10" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+    <circle cx="120" cy="90" r="10" fill="none" stroke="#00E5FF" stroke-width="2.5"/>
+    <circle cx="20" cy="130" r="6" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+    <circle cx="120" cy="130" r="6" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+  </g>
+
+  <text x="300" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#38BDF8" opacity="0.8">FAMILY · PERSONAL MANAGER</text>
+</svg>
